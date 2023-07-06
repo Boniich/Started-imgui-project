@@ -44,9 +44,6 @@ int main()
     io.Fonts->Clear(); // clear fonts if you loaded some before (even if only default one was loaded)
     io.Fonts->AddFontFromFileTTF("Fonts\\Roboto-Regular.ttf", 15.f);
     io.Fonts->AddFontFromFileTTF(FONT_ICON_FILE_NAME_FAS, iconFontSize, &icons_config, icons_ranges);
-    ImFont* robotoFont12px = io.Fonts->AddFontFromFileTTF("Fonts\\Roboto-Regular.ttf", 12.f);
-    ImFont* robotoFont18px = io.Fonts->AddFontFromFileTTF("Fonts\\Roboto-Regular.ttf", 18.f);
-
     ImGui::SFML::UpdateFontTexture(); // important call: updates font texture
 
 
@@ -72,7 +69,7 @@ int main()
         ImGui::ColorEdit3("Color Circle", circleColor);
         ImGui::End();
 
-        
+        ImGui::ShowDemoWindow();
 
         shape.setFillColor(sf::Color(
             (int)(circleColor[0] * 255),
